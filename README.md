@@ -20,7 +20,7 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 ---
 
 ## Project Motivation
-**Technical focus** Combine a strong gradient-boosting model with SHAP explanations to balance predictive power and interpretability.
+Combine a strong gradient-boosting model with SHAP explanations to balance predictive power and interpretability.
 
 ---
 
@@ -37,7 +37,7 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 | Drop exact duplicates | 22 rows removed | 7,032 → 7,010 |
 | Final dataset | No missing values; 20 predictors + target | **7,010 rows** |
 
-> See `data_cleaning_and_eda.ipynb` for full code & visuals.
+> See `data_cleaning_eda.ipynb` for full code & visuals.
 
 ---
 
