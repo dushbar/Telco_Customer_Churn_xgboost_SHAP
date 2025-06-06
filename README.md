@@ -12,10 +12,7 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 4. [Methodology](#methodology)  
 5. [Results](#results)  
 6. [Key SHAP Insights](#key-shap-insights)  
-7. [How to Reproduce](#how-to-reproduce)  
-8. [Next Steps](#next-steps)  
-9. [License](#license)  
-10. [Acknowledgements](#acknowledgements)  
+7. [Acknowledgements](#acknowledgements)  
 
 ---
 
@@ -47,7 +44,7 @@ XGBoost_SHAP_Telco_Churn
   1. WA_Fn-UseC_-Telco-Customer-Churn.csv # raw
   2. Telco_Customer_Churn_clean.csv # cleaned
 - notebooks
-  1. data_cleaning_and_eda.ipynb
+  1. data_cleaning_eda.ipynb
   2. xgboost_modeling.ipynb
   3. model_interpretation_shap.ipynb
 
@@ -61,3 +58,22 @@ XGBoost_SHAP_Telco_Churn
 | **Hyper-parameter tuning** | Randomized search over (gamma, learning_rate, max_depth, subsample). |
 | **Evaluation metric** | ROC AUC |
 | **Interpretability** | Use `shap.TreeExplainer` to generate global (summary plot) and local plot for feature with highest attribution |
+
+## Results
+
+| Model | ROC AUC |
+|-------|--------:|
+| **Baseline XGBoost** | **0.82758** |
+| **Tuned XGBoost** | **0.856549** |
+
+
+## Key SHAP Insights
+
+-`tenure, InternetService_Fiber optic, Contract_Two year, PaymentMethod_Electronic check` are the top 4 features by attribution.
+- These 4 features are also the top 4 features by F statistic that we found by applying ANOVA F-Test
+- Visual explanations are in `model_interpretation_shap.ipynb`.
+
+## Acknowledgements
+
+- **[Kaggle Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)**
+- Guidance from *Data Science Projects with Python: A case study approach* by Stephen Klosterman
