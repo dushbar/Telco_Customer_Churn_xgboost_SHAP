@@ -69,7 +69,7 @@ XGBoost_SHAP_Telco_Churn
 
 ## Key SHAP Insights
 
--`tenure, InternetService_Fiber optic, Contract_Two year, PaymentMethod_Electronic check` are the top 4 features by attribution.
+- `tenure, InternetService_Fiber optic, Contract_Two year, PaymentMethod_Electronic check` are the top 4 features by attribution.
 - These 4 features are also the top 4 features by F statistic that we found by applying ANOVA F-Test
 - Visual explanations are in `model_interpretation_shap.ipynb`.
 
