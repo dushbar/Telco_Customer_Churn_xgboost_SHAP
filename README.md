@@ -53,7 +53,7 @@ XGBoost_SHAP_Telco_Churn
 | Stage | Key Actions |
 |-------|-------------|
 | **EDA** | Univariate & bivariate plots|
-| **Pre-processing** | Binary columns → label encoding; multi-class categoricals → one-hot (dropping first level); numeric scaling kept native for XGBoost. |
+| **Pre-processing** | Binary columns → label encoding; multi-class categoricals → one-hot (dropping first level); no scaling was done. |
 | **Baseline model** | `XGBClassifier` (1000 trees, default params, `eval_metric='auc'`). |
 | **Hyper-parameter tuning** | Randomized search over (gamma, learning_rate, max_depth, subsample). |
 | **Evaluation metric** | ROC AUC |
