@@ -42,18 +42,11 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 ---
 
 ## Project Structure
-XGBoost_SHAP_Telco_Churn/
-├── data/
-│ ├── WA_Fn-UseC_-Telco-Customer-Churn.csv # raw
-│ └── Telco_Customer_Churn_clean.csv # cleaned
-├── notebooks/
-│ ├── 1_data_cleaning_and_eda.ipynb
-│ ├── 2_xgboost_modeling.ipynb
-│ └── 3_model_interpretation_shap.ipynb
-├── src/ # reusable code
-│ ├── preprocessing.py
-│ ├── modeling.py
-│ └── interpretability.py
-├── requirements.txt
-├── LICENSE
-└── README.md # ← you are here
+XGBoost_SHAP_Telco_Churn
+- data
+  1. WA_Fn-UseC_-Telco-Customer-Churn.csv # raw
+  2. Telco_Customer_Churn_clean.csv # cleaned
+- notebooks
+  1. data_cleaning_and_eda.ipynb
+  2. xgboost_modeling.ipynb
+  3. model_interpretation_shap.ipynb
