@@ -20,7 +20,7 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 ---
 
 ## Project Motivation
-- **Technical focus** Combine a strong gradient-boosting model with SHAP explanations to balance predictive power and interpretability.
+**Technical focus** Combine a strong gradient-boosting model with SHAP explanations to balance predictive power and interpretability.
 
 ---
 
