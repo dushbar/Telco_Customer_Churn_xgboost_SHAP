@@ -1,4 +1,4 @@
-# 📊 Telco Customer Churn — XGBoost & SHAP
+# Telco Customer Churn — XGBoost & SHAP
 
 An end-to-end, **explainable machine-learning** project that predicts telecom customer churn with **XGBoost** and interprets the model with **SHAP**.  
 The goal is to build a high-performance classifier *and* understand **why** it makes each prediction.
@@ -37,7 +37,7 @@ The goal is to build a high-performance classifier *and* understand **why** it m
 | Drop exact duplicates | 22 rows removed | 7,032 → 7,010 |
 | Final dataset | No missing values; 20 predictors + target | **7,010 rows** |
 
-> See `notebooks/1_data_cleaning_and_eda.ipynb` for full code & visuals.
+> See `data_cleaning_and_eda.ipynb` for full code & visuals.
 
 ---
 
@@ -50,3 +50,14 @@ XGBoost_SHAP_Telco_Churn
   1. data_cleaning_and_eda.ipynb
   2. xgboost_modeling.ipynb
   3. model_interpretation_shap.ipynb
+
+## Methodology
+
+| Stage | Key Actions |
+|-------|-------------|
+| **EDA** | Univariate & bivariate plots; target imbalance check (~26 % churn). |
+| **Pre-processing** | Binary columns → label encoding; multi-class categoricals → one-hot (dropping first level); numeric scaling kept native for XGBoost. |
+| **Baseline model** | `XGBClassifier` (1000 trees, default params, `eval_metric='auc'`). |
+| **Hyper-parameter tuning** | Randomized search over (gamma, learning_rate, max_depth, subsample). |
+| **Evaluation metric** | ROC AUC |
+| **Interpretability** | Use `shap.TreeExplainer` to generate global (summary plot) and local plot for feature with highest attribution |
